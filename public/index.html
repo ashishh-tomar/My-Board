@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.css" integrity="sha512-E+53kXnJyuZFSz75xSmTfCpUNj3gp9Bd80TeQQMTPJTVWDRHPOpEYczGwWtsZXvaiz27cqvhdH8U+g/NMYua3A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Open Board</title>
+</head>
+<body>
+    <div class="options-cont">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="tools-cont scale-tools">
+        <img src="icons/pencil-126.svg" class="pencil">
+        <img src="icons/eraser-35.svg" class="eraser">
+        <img src="icons/download-317.svg" class="download">
+        <img src="icons/upload-211.svg" class="upload">
+        <img src="icons/notes-47.svg" style="width: 2.5rem;" class="notes">
+        <img src="icons/ios-undo-outline-1.svg" class="undo">
+        <img src="icons/ios-redo-outline-2.svg" class="redo">
+    </div>
+
+    <div class="pencil-tool-cont">
+        <div class="pencil-width-cont">
+            <input type="range" min="2" max="10" value="3" class="pencil-width">
+        </div>
+        <div class="pencil-color-cont">
+            <div class="black pencil-color"></div>
+            <div class="red pencil-color"></div>
+            <div class="blue pencil-color"></div>
+        </div>
+    </div>
+
+
+    <div class="eraser-tool-cont">
+        <div class="eraser-width-cont">
+            <input type="range" min="2" max="10" value="3" class="eraser-width">
+        </div>
+    </div>
+
+    <canvas></canvas>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js" integrity="sha512-MgkNs0gNdrnOM7k+0L+wgiRc5aLgl74sJQKbIWegVIMvVGPc1+gc1L2oK9Wf/D9pq58eqIJAxOonYPVE5UwUFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        let socket=io.connect("http://localhost:5001");
+    </script>
+    <script src="../app.js"></script>
+    <script src="./tools.js"></script>
+    <script src="./canvas.js"></script>
+</body>
+</html>
