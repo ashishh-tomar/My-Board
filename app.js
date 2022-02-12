@@ -6,7 +6,7 @@ let app=express();
 
 app.use(express.static("public"));
 
-let port=5001;
+let port=process.env.PORT || 5001;
 let server=app.listen(port,()=>{
     console.log("Listening to Port "+port);
 });
